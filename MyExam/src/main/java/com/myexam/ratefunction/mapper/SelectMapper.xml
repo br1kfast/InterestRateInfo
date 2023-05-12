@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myexam.ratefunction.mapper.SelectMapper">
+
+    <select id="selectInterestRateTypeByBankNoAndRateCode" resultType="com.myexam.ratefunction.pojo.InterestRateType">
+        select * from prd_inrt_cgy where bankno = #{bankno} and ratecode = #{ratecode}
+    </select>
+
+    <select id="selectInterestRateInfoByRateCodeAndCcy" resultType="com.myexam.ratefunction.pojo.InterestRateInfo">
+        select * from prd_inrt_bsc where ratecode = #{ratecode} and ccy = #{ccy}
+    </select>
+
+    <select id="selectInterestRateInfoCountByRateCode">
+        select count(ratecode) from prd_inrt_bsc where ratecode = #{ratecode}
+    </select>
+</mapper>

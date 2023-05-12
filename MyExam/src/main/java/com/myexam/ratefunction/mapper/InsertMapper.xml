@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myexam.ratefunction.mapper.InsertMapper">
+
+    <insert id="addOneInterestRateType">
+        insert into prd_inrt_cgy
+        values (#{bankno},
+                #{ratecode},
+                #{ccy},
+                #{ratterm},
+                #{ratunit},
+                #{flgint},
+                #{intcop},
+                #{intdesc},
+                #{intntyp},
+                #{bakamt},
+                #{bakfld5},
+                #{mainseqno},
+                #{stsval})
+    </insert>
+
+    <insert id="addOneInterestRateInfo">
+        insert into prd_inrt_bsc
+        values (#{bankno},
+                #{branchcode},
+                #{brcno},
+                #{ratecode},
+                #{ccy},
+                #{ratterm},
+                #{ratunit},
+                #{dateval},
+                #{intcodd},
+                #{custratflg},
+                #{rattype},
+                #{flgint},
+                #{intrate},
+                #{flgflt},
+                #{intflt},
+                #{wayfint},
+                #{uppct},
+                #{downpct},
+                #{fupper},
+                #{downper},
+                #{baintno},
+                #{baratterm},
+                #{baratunit},
+                #{bakamt},
+                #{bakfld5},
+                #{mainseqno},
+                #{stsval})
+    </insert>
+
+</mapper>
+
+

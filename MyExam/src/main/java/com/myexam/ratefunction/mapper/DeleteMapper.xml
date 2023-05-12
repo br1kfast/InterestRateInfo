@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myexam.ratefunction.mapper.DeleteMapper">
+
+    <delete id="deleteOneInterestRateInfo">
+        delete from prd_inrt_bsc
+        where ratecode = #{ratecode}
+          and ccy = #{ccy}
+          and ratunit = #{ratunit}
+          and ratterm = #{ratterm}
+          and branchcode = #{branchcode}
+          and brcno = #{brcno}
+          and dateval = #{dateval}
+          and bankno = #{bankno}
+    </delete>
+
+    <delete id="deleteOneInterestRateType">
+        delete from prd_inrt_cgy
+        where bankno = #{bankno}
+          and ratecode = #{ratecode}
+          and ccy = #{ccy}
+          and ratunit = #{ratunit}
+          and ratterm = #{ratterm}
+    </delete>
+</mapper>
+

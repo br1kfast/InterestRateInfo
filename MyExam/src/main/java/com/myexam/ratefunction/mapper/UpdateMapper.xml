@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myexam.ratefunction.mapper.UpdateMapper">
+
+    <update id="updateOneInterestRateInfo">
+        update prd_inrt_bsc
+        set intcodd = #{intcodd},
+            custratflg = #{custratflg},
+            rattype = #{rattype},
+            flgint = #{flgint},
+            intrate = #{intrate},
+            flgflt = #{flgflt},
+            intflt = #{intflt},
+            wayfint = #{wayfint},
+            uppct = #{uppct},
+            downpct = #{downpct},
+            fupper = #{fupper},
+            downper = #{downper},
+            baintno = #{baintno},
+            baratterm = #{baratterm},
+            baratunit = #{baratunit},
+            bakamt = #{bakamt},
+            bakfld5 = #{bakfld5},
+            mainseqno = #{mainseqno},
+            stsval = #{stsval}
+        where ratecode = #{ratecode}
+        and ccy = #{ccy}
+        and ratunit = #{ratunit}
+        and ratterm = #{ratterm}
+        and branchcode = #{branchcode}
+        and brcno = #{brcno}
+        and dateval = #{dateval}
+        and bankno = #{bankno}
+    </update>
+
+    <update id="updateOneInterestRateType">
+        update prd_inrt_cgy
+        set flgint = #{flgint},
+            intcop = #{intcop},
+            intdesc = #{intdesc},
+            intntyp = #{intntyp},
+            bakamt = #{bakamt},
+            bakfld5 = #{bakfld5},
+            mainseqno = #{mainseqno},
+            stsval = #{stsval}
+        where bankno = #{bankno}
+        and ratecode = #{ratecode}
+        and ccy = #{ccy}
+        and ratunit = #{ratunit}
+        and ratterm = #{ratterm}
+    </update>
+</mapper>
+
